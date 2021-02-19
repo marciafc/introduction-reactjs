@@ -22,6 +22,9 @@
 
   - Exemplo JSX (pasta jsx)
 
+- lesson-02
+  - webpack-config (Como configurar **Webpack** + **ESLint**)
+
 ## Executar exemplos
 
 1. Acessar a pasta com o assunto a visualizar
@@ -174,3 +177,64 @@ Dentro da pasta "src", criar dois arquivos: "index.js" e "styles.css"
 - Não é obrigatório utilizar JSX
 - Sintax Suggar para React.createElement
 - Browser nao interpreta JSX... necessário transpilador (exemplo, o Babel)
+
+## Webpack
+
+- Modulo bundler: empacotador de módulos para aplicações js
+- [Site oficial webpack](webpack.js.org)
+- Entry
+- Output
+- Loaders
+- Plugins
+- Mode
+
+  - Production
+  - Development
+  - None
+
+- Projeto exemplo em 'lesson-02\webpack-config'
+
+  **source-map** ajuda no debug (ao visualizar na ferramenta do desenvolvedor no navegador)
+
+  Executar 'npm run build' (ou 'dev' ou 'start:dev' ou 'eslint')
+
+  ```
+    build": "webpack --mode production",
+    "dev": "webpack --mode development",
+    "start:dev": "webpack-dev-server",
+    "eslint": "eslint ./src/*.js"
+  ```
+
+  Dependência para gerar servidor: webpack-dev-server
+  -> localhost:8080
+
+## ESLint
+
+```shell
+   $  npm run eslint
+```
+
+- qualidade
+- manter padrão de desenvolvimento
+
+## Resumo Webpack, ESLint
+
+Loaders - É uma configuração que permite que o webpack gerencie arquivos que não são JavaScript.
+
+Babel - É um compilador e transpilador de JS.
+
+Tipos de suporte do webpack: Fontes, CSS, Imagens, HTML, JS e Plugins.
+
+Entry na configuração do webpack: É o ponto de entrada para o webpack buscar todos os módulos e dependências.
+
+O que é webpack? É um module bundlers (um empacotador de módulos para aplicações JS).
+
+Funcionalidade do Eslint: Validação de código.
+
+Principais conceitos do webpack: Entry, Output, Loaders, Plugins e Mode.
+
+Output na configuração do webpack: É para determinar quais são os bundlers que o webpack irá emitir.
+
+Através de qual dependência é possível criar um servidor de desenvolvimento local? webpack-dev-server.
+
+Tipos de modes existentes por padrão no webpack: Production, Development e None.
