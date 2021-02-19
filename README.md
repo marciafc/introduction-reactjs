@@ -23,7 +23,14 @@
   - Exemplo JSX (pasta jsx)
 
 - lesson-02
+
   - webpack-config (Como configurar **Webpack** + **ESLint**)
+
+- lesson-03
+  - Renderização condicional (pasta conditional-renderization)
+  - Listas e chaves (pasta list-and-keys)
+  - Manipulando eventos (pasta events-manipulation)
+  - Dicas para pensar do jeito ReactJS (pasta thinking-react)
 
 ## Executar exemplos
 
@@ -196,12 +203,16 @@ Dentro da pasta "src", criar dois arquivos: "index.js" e "styles.css"
 
   **source-map** ajuda no debug (ao visualizar na ferramenta do desenvolvedor no navegador)
 
-  Executar 'npm run build' (ou 'dev' ou 'start:dev' ou 'eslint')
+  // lesson-03 \ conditional-renderization
+  Executar 'npm run build' para webpack em modo produção
+  Executar 'npm run dev' para webpack em modo desenvolvimento
+  Executar 'npm run start' para subir servidor em modo desenvolvimento
+  Executar 'npm run eslint' para executar o eslint
 
   ```
-    build": "webpack --mode production",
+    "build": "webpack --mode production",
     "dev": "webpack --mode development",
-    "start:dev": "webpack-dev-server",
+    "start": "webpack-dev-server --open --hot --mode development",
     "eslint": "eslint ./src/*.js"
   ```
 
@@ -238,3 +249,7 @@ Output na configuração do webpack: É para determinar quais são os bundlers q
 Através de qual dependência é possível criar um servidor de desenvolvimento local? webpack-dev-server.
 
 Tipos de modes existentes por padrão no webpack: Production, Development e None.
+
+## Referência
+
+https://github.com/Tautorn/introduction-reactjs
